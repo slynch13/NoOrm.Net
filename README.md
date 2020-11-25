@@ -56,7 +56,7 @@ var value = connection.Single<string>("select v from t limit 1 where id = @id", 
 - Iterate trough set of three values:
 
 ```csharp
-foreach(var (value, value2, value3) in connection.Read<string, int bool>("select v1, v2, v3 from t"))
+foreach(var (value, value2, value3) in connection.Read<string, int, bool>("select v1, v2, v3 from t"))
 {
     // do something with value, value2, value3
 }
